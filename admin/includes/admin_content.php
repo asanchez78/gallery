@@ -10,11 +10,30 @@
 
 
                         <?php
-                        $sql = "SELECT * FROM users WHERE id=1";
-                        $result = $database->query($sql);
-                        $user_found = mysqli_fetch_array($result);
 
-                        echo $user_found['username'];
+                        // $result_set = User::find_all_users();
+
+                        // while ($row = mysqli_fetch_array($result_set)) {
+                        //     echo $row['username'] . "<br>";
+                        // }
+
+                        // $found_user = User::find_user_by_id(2);
+
+                        // $user = User::instantiation($found_user);
+
+
+                        // echo $user->username;
+
+                        // echo "<br>";
+
+                        $users = User::find_all_users();
+
+                        foreach ($users as $user) {
+                            echo $user->username . "<br>";
+                        }
+$picutres = new Pictures();
+                        $found_user = User::find_user_by_id(2);
+                        echo $found_user->username;
                         ?>
 
 
