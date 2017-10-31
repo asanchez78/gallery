@@ -26,12 +26,12 @@
 
                         // echo "<br>";
 
-                        $users = User::find_all_users();
+                        // $users = User::find_all_users();
 
-                        foreach ($users as $user) {
-                            echo $user->username . "<br>";
-                        }
-$picutres = new Pictures();
+                        // foreach ($users as $user) {
+                        //     echo $user->username . "<br>";
+                        // }
+
                         $found_user = User::find_user_by_id(2);
                         echo $found_user->username;
                         ?>
